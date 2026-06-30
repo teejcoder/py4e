@@ -198,7 +198,6 @@ except:
     quit()
 
 def computepay(hours: float, rate: float)-> float:
-    
     if hours > 40:
         base = hours * rate
         oth = hours - 40
@@ -212,7 +211,6 @@ print(computepay(hours, rate), 475.0)
 # Enter Rate: 10
 # Pay: 475.0
 
-
 # Exercise 7: Rewrite the grade program from the previous chapter using a function called computegrade 
 # that takes a score as its parameter and returns a grade as a string.
 try: 
@@ -222,8 +220,6 @@ except:
     quit()
         
 def computegrade(score:float)-> str:
-    
-    
     if score >= 0.9:
         return "A"
     elif score >= 0.8:
@@ -236,4 +232,3 @@ def computegrade(score:float)-> str:
         return "F"
 
 print(computegrade(score))
-    

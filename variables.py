@@ -2,7 +2,7 @@ x = 4
 x = x - 2
 print(type(x))
 print(x)
-print(1,000,000)
+print(1,000,000) #1 0 0
 
 msg = 'And now for something completely different!'
 n = 3.14159
@@ -67,7 +67,6 @@ pizza = [1,2,3,4,5,6,7,8,9,10]
 
 for n in pizza:
     print(n)
-
 
 #Exercises
 

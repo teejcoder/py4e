@@ -49,16 +49,22 @@ hours = input('Enter hours: \n')
 rate = input('enter rate: \n')
 
 try:
-    hours = int(hours)
-    rate = int(rate)
-    if hours > 40:
-        total = hours * (rate * 1.5)
-    else:
-        total = hours * rate
-    print(total)
+    fh = float(hours)
+    fr = float(rate)
 except:
-    print('ERROR: enter a number next time..')
+    print('ERROR: please enter a numeric input.')
+    quit()
 
+if fh > 40:
+    print('overtime!')
+    reg = fh * fr
+    otr = (fh - 40) * (fr *  0.5)
+    print(reg, otr)
+    pay = reg + otr
+else:
+    print('regular!')
+    pay = fh * fr
+print("total pay:",pay)
 
 # Exercise 3: Write a program to prompt for a score between 0.0 and 1.0. 
 # If the score is out of range, print an error message. 
@@ -67,15 +73,16 @@ except:
 score = input('enter a number between 1 - 100: \n')
 try:
     score = int(score)
-    if score >= 90:
-        print('A')
-    elif score >= 80:
-        print('B')
-    elif score >= 70:
-        print('C')
-    elif score >= 60:
-        print('D')
-    elif score < 60:
-        print('F')
 except:
-    print('enter a SCORE AS A NUMBER and between 1 - 100 LOL')
+    print('ERROR: please enter a numeric input.')
+    quit()
+if score >= 90:
+    print('A')
+elif score >= 80:
+    print('B')
+elif score >= 70:
+    print('C')
+elif score >= 60:
+    print('D')
+elif score < 60:
+    print('F')
